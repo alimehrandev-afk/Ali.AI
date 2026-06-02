@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply border-border;
+}
+
+html {
+  @apply scroll-smooth;
+}
+
+body {
+  @apply bg-dark-950 text-white;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-500 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary-600;
+}
+
+/* Animations */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  @apply bg-gradient-to-r from-primary-500 via-accent-500 to-primary-500;
+  background-size: 200% 200%;
+  animation: gradient 3s ease infinite;
+}
+
+/* Focus styles */
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  @apply outline-none;
+}
+
+/* Utility classes */
+.glass {
+  @apply bg-dark-800/50 backdrop-blur border border-dark-700/50;
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-primary-400 to-accent-500 bg-clip-text text-transparent;
+}
+
+.shadow-glow {
+  @apply shadow-lg shadow-primary-500/20;
+}
